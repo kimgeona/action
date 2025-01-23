@@ -1,6 +1,13 @@
 # Action
-Action 은 자주 사용하는 쉘스크립트들을 마치 콘솔 명령어처럼 쉽게 사용하기 위해 만들어졌습니다.
+Action은 자주 사용하는 쉘 스크립트들을 커스텀 명령어로 실행해주는 프로그램입니다. ActionFile을 이용하여 쉘 스크립트를 기록하고 명령어로 만들어 작업들을 간편화 해보세요. :)
 
-Action 스크립트를 이용하여 자주 사용하는 작업들을 간편화 해보세요. :)
+    # 프로젝트 다운
+    $ git clone https://github.com/kimgeona/action.git
 
-> (개발중)
+    # 프로그램 생성 
+    $ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=./action/install -S./action -B./action/build
+    $ cmake --build ./action/build -j$(sysctl -n hw.ncpu)
+    $ cmake --build ./action/build --target install
+
+### ActionFile 작성 방법
+..프로그램 개발중
