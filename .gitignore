@@ -1,5 +1,6 @@
 # CMake Projects
 /build
+/io
 
 # MacOS
 *.DS_Store
