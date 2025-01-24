@@ -71,7 +71,8 @@ public:
             // 스크립트 실행
             for (const auto& [type, content] : list) {
                 if (type == '$') {
-                    std::cout << content << std::endl; // TODO: 스크립트를 실행하는 코드로 바꾸기
+                    if (system(content.c_str()))
+                        return 1;
                 }
             }
         }
@@ -87,8 +88,10 @@ public:
                 switch (type)
                 {
                     case '$':
-                        std::cout << content << std::endl; // TODO: 스크립트를 실행하는 코드로 바꾸기
+                        if (system(content.c_str()))
+                            return 1;
                         break;
+                        
                     case ':':
                         if (content == command) {
                             (*this)[content].action(commands);

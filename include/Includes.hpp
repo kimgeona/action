@@ -11,6 +11,7 @@
 #include <deque>
 #include <map>
 #include <filesystem>
+#include <cstdlib>
 
 #ifndef Includes_hpp
 #define Includes_hpp
