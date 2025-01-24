@@ -23,6 +23,16 @@ std::deque<std::string> commands;
 // 메인 프로그램
 int main(int argc, const char * argv[])
 {
+    //
+    if (std::string("--version")==argv[1]) {
+        printBox({
+            "action version " + ACTION_VERSION,
+            "",
+            "ⓒ 2025. kimgeona All rights reserved."
+        });
+        return 0;
+    }
+    
     // 1. 명령어 저장
     for (int i = 1; i < argc; ++i) {
         commands.push_back(argv[i]);
